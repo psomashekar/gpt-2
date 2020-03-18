@@ -90,7 +90,7 @@ def interact_model(
                         print(text)
                 print("=" * 80)
         else:
-            context_tokens = enc.encode(raw_text)
+            context_tokens = enc.encode(seed_text)
             generated = 0
             for _ in range(nsamples // batch_size):
                     out = sess.run(output, feed_dict={
